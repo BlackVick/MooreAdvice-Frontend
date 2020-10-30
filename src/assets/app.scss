@@ -1,0 +1,94 @@
+@import "~bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+
+body {
+  font-family: "Baloo 2", sans-serif !important;
+}
+
+// hide scroll bar
+#sidebar .sidebar-content {
+  -ms-overflow-style: none !important; // IE 10+
+  overflow: hidden !important; // Firefox
+}
+
+#sidebar .sidebar-content::-webkit-scrollbar {
+  display: none !important; // Safari and Chrome
+}
+
+@media (min-width: 992px) {
+  .modal-lg,
+  .modal-xl {
+    max-width: 1200px;
+  }
+}
+
+//loading
+.box {
+  background: #ffffffa4;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  .b {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border-left: 4px solid;
+    border-right: 4px solid;
+    border-top: 4px solid transparent !important;
+    border-bottom: 4px solid transparent !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ro 3s infinite;
+  }
+  .tx {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .b1 {
+    border-color: #267294;
+    width: 120px;
+    height: 120px;
+  }
+  .b2 {
+    border-color: #106d0d;
+    width: 100px;
+    height: 100px;
+    animation-delay: 0.3s;
+  }
+  .b3 {
+    border-color: #ffd700;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0.6s;
+  }
+  .b4 {
+    border-color: #92cf48;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0.9s;
+  }
+
+  @keyframes ro {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+      transform: translate(-50%, -50%) rotate(-180deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+  }
+}
